@@ -1,0 +1,318 @@
+PRD: AKWA IBOM RENTAL REVIEW & VERIFICATION PLATFORM
+Working name: RentTruth AKS (change anytime)
+Version 0.1 - Draft for founder review
+==========================================================
+1. OVERVIEW
+----------------------------------------------------------
+Renting a home in Uyo and the rest of Akwa Ibom is a trust problem. Tenants get shown one house and handed another ("what I ordered vs what I got"), pay agents who vanish, rent rooms that were already sold or let to someone else, and discover problems (flooding, no water, bad landlords, noisy compounds) only after paying. There is no shared memory: when a tenant moves out, everything they learned disappears.
+THE PRODUCT: a social, community-driven web platform where tenants who are moving out upload real photos and honest reviews of the place they lived in, and where house hunters can check a property, landlord or agent BEFORE paying anything. Think of it as Airbnb reviews + Google Maps photos + a scam-watch board, built for the Akwa Ibom rental market.
+NOTE ON SOURCES: this draft is based on well-known rental pain points in Nigerian cities and what the founder described. Before building, validate with 15 to 20 real conversations in Uyo (tenants, agents, landlords) and collect local numbers (typical rent, agent fees, scam reports). No statistics have been invented here.
+2. PROBLEM STATEMENT
+----------------------------------------------------------
+- Misrepresentation: photos online or on WhatsApp don't match the real house; a different house is shown at inspection.
+- Agent fraud: inspection fees, "commitment" fees or rent collected, then the agent is unreachable.
+- Double letting / already sold: the same room or building is rented to multiple people, or the property is already sold/occupied.
+- Hidden defects: flooding, bad drainage, no water, poor power, leaking roof, insecurity, noisy neighbours.
+- Landlord issues: sudden rent hikes, unfair deductions, harassment, refusal to repair.
+- Unregulated agent fees: agent, agreement and legal fees vary wildly with no benchmark.
+- No accountability: a bad agent or landlord simply changes number and continues.
+3. GOALS AND NON-GOALS
+----------------------------------------------------------
+GOALS
+- Let any tenant or house hunter see honest, photo-backed reviews of a property, landlord or agent before paying.
+- Make outgoing tenants the source of truth by making it quick and rewarding to post a move-out review.
+- Reduce scams by building public, verifiable reputations for agents and landlords.
+- Become the first place people in Uyo check before paying any rent or fee.
+NON-GOALS (for MVP)
+- Not handling rent payments or escrow yet (Phase 3).
+- Not a legal dispute service.
+- Not covering all of Nigeria. Launch Uyo first, then expand across Akwa Ibom (Eket, Ikot Ekpene, Oron, Abak, Ikot Abasi) and beyond.
+4. TARGET USERS
+----------------------------------------------------------
+1. Outgoing tenant (the contributor): moving out, has the best knowledge of the place. Motivation: help the next person, vent fairly, get recognition, possibly rewards.
+2. House hunter (the reader): students (UNIUYO, AKSU), young professionals, civil servants, families, newly posted workers, people relocating from other states. Motivation: avoid scams and bad houses.
+3. Honest agent: wants to stand out from scammers and get more clients through a verified badge.
+4. Landlord / property owner: wants good tenants and to defend their reputation with replies.
+5. Admin / moderator: verifies listings, handles reports and disputes.
+5. CORE CONCEPT: THE MOVE-OUT REVIEW
+----------------------------------------------------------
+A guided 3 to 5 minute flow a tenant completes while packing out:
+1. Confirm the property (map pin + address + house photo).
+2. Upload photos by checklist: compound and gate, sitting room, bedrooms, kitchen, bathroom/toilet, ceiling and roof leaks, water source, meter, drainage, street at the front.
+3. Rate categories (1 to 5): water, light/power, security, drainage and flooding, neighbours, landlord behaviour, value for money, agent honesty.
+4. Write or record (voice note) the "I loved this / I didn't like this" summary.
+5. Add the facts: rent paid, period, agent fee paid, caution fee, whether rent was increased, and whether the deposit was returned.
+6. Answer: Would you rent here again? Would you recommend this agent/landlord?
+7. Submit. Photos are timestamped and geotagged for credibility.
+6. BEST-CASE SCENARIOS (what great looks like)
+----------------------------------------------------------
+- Chioma, a nurse posted to Uyo, searches an area, finds a flat with 6 move-out reviews, real photos and a note that the compound floods in heavy rain. She skips it and finds a better one with a verified landlord.
+- A student checks a hostel room before paying and sees the real bathroom photos, noting the water is borehole-supplied and reliable. She pays confidently.
+- An honest agent earns a Verified badge and 40 positive reviews. Clients now come to him by name, and he stops competing on price alone.
+- A good landlord replies to a review, fixes the leaking roof, and updates his listing. His property fills faster and he can charge fairly.
+- A moving-out tenant posts a review in five minutes, earns a "Trusted Reviewer" badge and credits that can be used for perks.
+- A scam attempt is stopped when a house hunter searches the agent's phone number, finds three scam reports and warns friends in the community.
+- The state benefits: aggregated data shows where housing is poor and where prices are fair, which is valuable to planners, banks and developers.
+7. WORST-CASE SCENARIOS AND MITIGATIONS
+----------------------------------------------------------
+* Fake positive reviews by agents/landlords
+  Risk: platform loses trust.
+  Fix: require proof of tenancy (geotagged photos + phone verification + optional agreement/receipt); owners and agents cannot review their own property; spam and pattern detection; review limit per user per property.
+* Fake negative reviews by rivals
+  Risk: unfair damage to honest people.
+  Fix: same proof rules; right of reply; report-and-review process; flagged reviews checked by a human.
+* Defamation claims from landlords/agents
+  Risk: legal exposure.
+  Fix: reviews framed around factual experience; clear terms; no unverified criminal accusations stated as fact (use "reported by users"); takedown and dispute process; have a Nigerian lawyer review the terms.
+* Tenants fear retaliation
+  Risk: nobody posts.
+  Fix: allow posting after move-out; allow pseudonymous display names (identity known only to admins); hide exact unit numbers if needed.
+* Privacy breach
+  Risk: faces, number plates, neighbours' details exposed.
+  Fix: guidance not to photograph people; remove personal phone numbers from reviews; comply with the Nigeria Data Protection Act 2023.
+* Platform only has data for a few areas
+  Risk: low value, people leave.
+  Fix: seed Uyo area by area; reward early reviewers; collect field data through campus ambassadors.
+* Scammers list fake properties on the platform
+  Risk: becomes a new scam channel.
+  Fix: listings require verification (phone, ID, physical check for badge); "Unverified" clearly labelled; no in-app payments in the MVP.
+* Poor internet / low data
+  Risk: people can't upload photos.
+  Fix: image compression, resumable uploads, lightweight pages, PWA with offline draft saving.
+* Mob behaviour / harassment
+  Risk: toxic community.
+  Fix: community guidelines, moderation, report buttons, rate limits.
+* Landlords and agents oppose the platform
+  Risk: resistance, threats.
+  Fix: position as "fair for good landlords"; give them verified badges and a right of reply.
+* Low contribution (cold start)
+  Risk: empty site.
+  Fix: start with reviews collected by the team; partner with student bodies and estate groups; reward the first 500 reviewers.
+8. FEATURES
+----------------------------------------------------------
+MVP (build first, about 8 to 12 weeks)
+- Sign-up with phone number + OTP.
+- Property pages: address, map pin, photos, aggregate rating, reviews, rent history.
+- Move-Out Review flow (section 5) with photo checklist and voice-note option.
+- Search and filters: area (Ewet Housing, Shelter Afrique, Ikot Ekpene Road, Abak Road, Aka Road, Itam, Use Offot, Ibiono, etc.), price range, room type, ratings.
+- Agent and landlord profiles with reviews and scam report count.
+- SCAM CHECK: search by phone number, name, or house address to see reports.
+- Report a scam / report a listing (with evidence upload).
+- Right of reply for landlords and agents.
+- Basic moderation dashboard for admins.
+- Share to WhatsApp with a clean preview card.
+- Mobile-first PWA, low-bandwidth friendly.
+PHASE 2 (community and trust)
+- Verified badges: Verified Tenant, Verified Landlord, Verified Agent (ID + physical visit).
+- "What I ordered vs what I got" side-by-side: listing photo next to the real tenant photo.
+- Social feed: follow areas, comment, like, save properties, ask questions in property threads.
+- Neighbourhood guides: flooding risk, power, water, safety, commute, average rent.
+- Reviewer reputation: points, levels and badges.
+- Alerts when a new review appears for a saved property.
+- Agent fee benchmark by area.
+PHASE 3 (marketplace and money)
+- Verified listings marketplace where landlords post vacancies directly.
+- Inspection booking with verified agents.
+- Escrow-style rent payment (payment partner and regulatory review needed).
+- Digital tenancy agreement templates.
+- Anonymised data insights for banks, developers and government.
+- Expansion to other Akwa Ibom towns and other states.
+9. KEY USER FLOWS
+----------------------------------------------------------
+FLOW A - Check before you pay: open site > search area or paste agent number/address > see property page > read reviews and photos > see scam flags > share or contact verified party.
+FLOW B - Post a move-out review: sign in > tap "I'm moving out" > pick or add property > guided photo checklist > ratings and facts > submit > review goes live after automated checks (and human check if flagged).
+FLOW C - Report a scam: tap report > choose type (fake listing, collected money and vanished, double letting, misrepresentation) > add phone/name/evidence > submit > admin reviews > shown as "reported by N users" once threshold and review criteria are met.
+FLOW D - Landlord/agent reply: receive notification > verify identity > post public reply > optionally update listing or mark issue as fixed.
+10. TRUST AND VERIFICATION SYSTEM
+----------------------------------------------------------
+This is what makes or breaks the product.
+1. Phone-verified accounts (OTP) for every user.
+2. Proof of tenancy (any one of: geotagged photos taken at the property, tenancy agreement, rent receipt, utility bill). Reviews with proof get a "Verified Tenant" tag and rank higher.
+3. Photo integrity: capture timestamp and location metadata; flag reused images (duplicate image detection).
+4. Anti-abuse: one review per tenant per tenancy, rate limits, owner/agent self-review blocks.
+5. Reputation scores for reviewers, agents and landlords, weighted by verified reviews.
+6. Transparency: every property shows how many reviews are verified and the date of the last review (old reviews count less).
+7. Dispute process: the reviewed party can contest; a moderator checks evidence; outcomes are logged.
+11. DATA MODEL (high level)
+----------------------------------------------------------
+- User: id, phone, display name, role(s), verification level, reputation points.
+- Property: id, address, coordinates, area, type, photos, current status, owner link (optional).
+- Review: id, property id, user id, tenancy dates, rent paid, fees paid, category ratings, text/voice, photos, proof, status, verified flag.
+- Agent / Landlord profile: id, name, phones, verification status, linked properties, average rating, scam report count.
+- ScamReport: id, reported phone/name, type, evidence, reporter id, status, review notes.
+- Reply, Comment, Report, Badge, Notification.
+12. MONETIZATION (later, never at the cost of trust)
+----------------------------------------------------------
+- Verified badge subscription for agents and landlords (they pay for verification work, not for good reviews).
+- Featured verified listings (clearly labelled).
+- Inspection booking and lead fees from verified agents.
+- Escrow / payment transaction fee (Phase 3).
+- Anonymised market data reports for banks, developers and institutions.
+- Reviewer rewards funded by the above (airtime, data, discount partners).
+RULE: no one can pay to remove or hide a genuine review.
+13. LEGAL, PRIVACY AND SAFETY
+----------------------------------------------------------
+- Consult a Nigerian lawyer on defamation risk, terms of use and takedown process before launch.
+- Comply with the Nigeria Data Protection Act 2023: clear consent, privacy policy, data minimisation, secure storage.
+- Avoid publishing sensitive personal data; mask phone numbers in reviews (Scam Check search can still match them).
+- Language: show "reported by users" rather than declaring someone a criminal.
+- Make it easy for any person to request correction or removal of inaccurate content.
+- Consider engaging the Akwa Ibom State ministry responsible for housing/lands and local estate or landlord associations early, so the platform is seen as a partner.
+14. GO-TO-MARKET (Uyo first)
+----------------------------------------------------------
+1. Seed the data: the team (or paid campus ambassadors) documents 100 properties across 10 popular Uyo neighbourhoods; collect 200+ tenant reviews.
+2. Campus launch: UNIUYO, AKSU and other schools. Students move every year and are heavy WhatsApp users.
+3. WhatsApp and social: shareable review cards, a community group, TikTok/Instagram/X short videos of "what I ordered vs what I got" stories.
+4. Estate and church/community groups: trusted channels in Akwa Ibom.
+5. Honest agents first: onboard 20 to 30 good agents as early partners and badge them.
+6. Local media and influencers: campaign around "Check before you pay."
+7. Reviewer rewards: airtime or data for the first 500 verified reviews.
+15. SUCCESS METRICS (first 6 months, MVP targets)
+----------------------------------------------------------
+- Verified move-out reviews: 500+
+- Properties with at least one review: 300+
+- Monthly active users: 5,000+
+- Scam Check searches per month: 2,000+
+- Reviews with photos: 70%+
+- Verified agents/landlords: 50+
+- Review completion rate (started vs submitted): 60%+
+- User-reported scams avoided: track via survey
+16. SUGGESTED TECH APPROACH
+----------------------------------------------------------
+- Frontend: Next.js / React as a mobile-first PWA (works like an app without app-store friction).
+- Backend: Node.js (or Python/Django), PostgreSQL with PostGIS for location search.
+- Storage: cloud image storage with automatic compression (Cloudinary, S3 or similar).
+- Auth: phone OTP via a Nigerian-friendly SMS provider.
+- Maps: Google Maps or OpenStreetMap/Mapbox.
+- Moderation: admin dashboard plus basic automated checks (duplicate images, spam).
+- Performance: lazy loading, image compression, light pages, resumable uploads for weak networks.
+- Later: native Android app (most users are on Android), USSD or WhatsApp bot for low-data users.
+17. ROADMAP
+----------------------------------------------------------
+Phase 0 - Research (Weeks 1-3): interviews, competitor review, legal consult, brand.
+Phase 1 - MVP build (Weeks 4-12): reviews, property pages, Scam Check, search, moderation.
+Phase 2 - Uyo pilot (Months 3-6): seed data, campus launch, first 500 reviews.
+Phase 3 - Trust layer (Months 6-9): verified badges, ordered-vs-got view, community features.
+Phase 4 - Marketplace (Months 9-15): verified listings, inspections, payment/escrow research.
+Phase 5 - Expansion (Year 2): other Akwa Ibom towns, then other states.
+18. KEY RISKS
+----------------------------------------------------------
+- Cold start: an empty platform has no value. Fix: seed data aggressively in a small area.
+- Legal pushback. Fix: lawyer, careful wording, dispute process.
+- Fake reviews. Fix: proof of tenancy and moderation.
+- Low contribution. Fix: rewards, easy flow, voice notes.
+- Data cost for users. Fix: lightweight design and compression.
+- Funding. Fix: start lean, validate with the pilot, then pursue grants/angels interested in proptech and consumer protection.
+19. OPEN QUESTIONS
+----------------------------------------------------------
+1. Brand name and domain (something Akwa Ibom people relate to).
+2. Will you pay ambassadors for the first data collection round?
+3. Should reviews be fully public or visible after sign-up?
+4. Who is your legal adviser and what is your budget for verification (physical visits)?
+5. Do you want to include land and sales scams later, or stay on renting?
+6. Solo build or with a team? That shapes the MVP scope and timeline.
+20. NEXT STEPS
+----------------------------------------------------------
+1. Interview 15 to 20 people in Uyo (tenants, agents, landlords).
+2. Decide the name and lock the MVP scope from section 8.
+3. Design wireframes for the Move-Out Review and the Scam Check search.
+4. Build the MVP and seed it with real reviews from at least 3 neighbourhoods before public launch.
+
+
+
+
+
+
+
+
+
+
+
+You are designing a complete, production-quality web app called "RentTruth AKS", a social rental review and scam-check platform for Uyo and Akwa Ibom State, Nigeria. Tenants who are moving out upload real photos and honest reviews of the houses they lived in. House hunters check a property, landlord or agent before paying, so they avoid scams, "what I ordered vs what I got" situations, double-letting and fake agents.
+IMPORTANT INSTRUCTION: Design EVERY page and screen listed below, fully, with real placeholder content (no lorem ipsum, use realistic Uyo names, areas and Naira prices). Do NOT stop, pause, summarise or ask me to continue until every single screen is designed. If you run out of room, keep going until all screens are done. Do not skip pages.
+PLATFORM
+- Mobile-first responsive web app (design mobile screens first, then desktop versions of the key pages).
+- Audience: students, young professionals, families, civil servants in Uyo. Many are on mid-range Android phones and limited data, so keep it clean and light.
+VISUAL STYLE
+- Warm, earthy, trustworthy and modern. Friendly, not corporate.
+- Color palette (use exactly these):
+  - Primary sage green: #8B9A6E
+  - Warm cream background: #F7F2EB
+  - Sand / card surface: #EAE2D6
+  - Soft light grey: #EEEEEE
+  - Add one deep olive-charcoal for text (#2F3626) and a muted terracotta (#C4684A) only for warnings, scam alerts and destructive actions.
+- Rounded corners (16 to 24px), soft shadows, generous spacing, large readable type (a friendly geometric sans-serif for headings, clean sans-serif for body).
+- Use real-feeling photo placeholders of Nigerian houses, rooms, compounds, streets.
+- 3D ANIMATIONS: use 3D animation and depth wherever it fits, and honestly almost everywhere it can: 3D door, 3D house models that rotate, floating 3D keys / location pins / badges, parallax layers, tilt-on-hover cards, depth transitions between pages, 3D-style rating stars, animated 3D verified-badge shield. Keep everything smooth and tasteful, with a reduced-motion fallback for accessibility.
+CORE USER RULES (reflect these in the UI)
+- No account needed to: browse, search, view properties, read reviews, run Scam Check, like, and comment (guest comments show a "Guest" label and ask for a display name).
+- Account REQUIRED to: post a Move-Out Review with photos, report a scam with evidence, follow/save, reply as landlord or agent, and CHAT with a person who posted. When a guest taps one of these, show a friendly, beautiful sign-up prompt (bottom sheet on mobile, modal on desktop), never a hard wall.
+- Sign-in options: Continue with Google (primary), phone number + OTP, and email. Verified badges: Verified Tenant, Verified Landlord, Verified Agent.
+LANDING PAGE FLOW (most important, make it unforgettable)
+1. Hero: headline "Check before you pay." with sub-text about honest tenant reviews in Akwa Ibom. A slowly rotating 3D house model with floating 3D pins and keys around it, parallax background in cream and sage.
+2. A large "Get Started" button.
+3. When "Get Started" is tapped, play a 3D DOOR animation: a beautiful 3D front door in the center swings open toward the user with warm light spilling out, the camera moves through the doorway, and the user lands on the Home feed. Design the frames/states of this transition (closed door, door opening, walking through, arrival).
+4. Below the hero on the landing page: How it works (3 steps with 3D icons: Check, Review, Stay Safe), "What I ordered vs What I got" interactive 3D flip-card demo, live-feel stats strip (reviews, properties, scams flagged), testimonial cards, Scam Check preview search box, featured neighbourhoods (Ewet Housing, Shelter Afrique, Ikot Ekpene Road, Abak Road, Aka Road, Itam, Use Offot, Ibiono), call to action for tenants who are moving out, call to action for honest agents and landlords, FAQ, footer.
+PAGES AND SCREENS TO DESIGN (design all of them)
+Public / no login needed:
+1. Landing page (with door animation states)
+2. Home feed (social feed of recent move-out reviews, photo-first cards, like and comment counts, area filter chips, "Scam alerts" strip, floating "+ Post review" button)
+3. Search and results (filters: area, price range, room type, rating, verified only, map/list toggle)
+4. Map view (pins with rating bubbles)
+5. Property detail page (photo gallery with 3D tilt carousel, rating breakdown for water, light, security, drainage, neighbours, landlord, value; rent history; reviews list; "Ordered vs Got" comparison; comments; like; save; chat button; report button)
+6. Single review page (full photos, voice-note player, facts: rent paid, agent fee, deposit returned, would-rent-again; comments thread; reply from landlord/agent)
+7. Scam Check page (big search by phone number, name or address; result states: "No reports", "Reported by 3 users" in terracotta, "Verified" in green)
+8. Scam report details page
+9. Agent profile page and Landlord profile page (ratings, verified badge, listings, reviews, scam report count, response rate)
+10. Neighbourhood guide page (flood risk, water, power, security, average rent, commute, top reviews)
+11. Agent fee benchmark page (typical fees by area)
+12. How it works page
+13. About / our mission page
+14. Community guidelines, Terms of use, Privacy policy pages
+15. Contact / help / FAQ page
+Authentication:
+16. Sign up / Sign in screen (Continue with Google, phone OTP, email)
+17. OTP verification screen
+18. Complete profile / onboarding (display name, role: tenant, house hunter, agent, landlord)
+19. Guest "Create account to continue" prompt (bottom sheet and modal versions)
+20. Forgot password / account recovery
+Logged-in features:
+21. Post a Move-Out Review: a multi-step flow, each step its own screen:
+    a. Find or add property (map pin, address, cover photo)
+    b. Photo checklist upload (compound and gate, sitting room, bedrooms, kitchen, bathroom, roof/ceiling, water source, meter, drainage, street) with progress ring and per-room upload tiles
+    c. Rate categories with 3D-style stars
+    d. Write or record voice note ("What I loved / what I didn't like")
+    e. Add the facts (rent, period, agent fee, caution fee, rent increase, deposit returned)
+    f. Proof of tenancy upload (geotagged photos, receipt, agreement)
+    g. Preview and submit
+    h. Success screen with confetti and Trusted Reviewer badge animation
+22. Report a scam / report a listing flow (type, phone/name, evidence upload, submit, confirmation)
+23. Chat inbox (list of conversations)
+24. Chat thread (text, image sharing, property card inside chat, safety tip banner: "Never pay before inspecting")
+25. User profile page (my reviews, saved, badges, reputation level, followers)
+26. Edit profile and settings
+27. Saved properties and followed neighbourhoods
+28. Notifications page
+29. Verification centre (get Verified Tenant, Verified Landlord, Verified Agent badge: ID upload, steps, status)
+30. Landlord/agent dashboard (reviews received, reply to reviews, mark issue fixed, profile views)
+31. Reply to review screen (landlord/agent)
+32. Reviewer rewards and badges page (points, levels, airtime/data rewards)
+Admin:
+33. Admin dashboard (moderation queue, flagged reviews, scam reports, verification requests, user management, analytics)
+System states:
+34. Empty states (no reviews yet, no results, no chats) with friendly 3D illustrations
+35. Error pages: 404, no internet / low data mode, upload failed with retry
+36. Loading and skeleton screens
+37. Success and confirmation screens
+NAVIGATION
+- Mobile: bottom navigation bar (Home, Search, + Post, Chat, Profile) with a raised 3D center "+" button.
+- Desktop: clean top nav with logo, search, Scam Check, Post Review, Sign in.
+TRUST UI DETAILS
+- Show verification badges, "Verified Tenant" tags, review dates, and a "photos verified with location and time" indicator.
+- Scam warnings use terracotta color with a clear icon but a calm tone.
+- Always show a gentle safety tip: "Never pay before you inspect."
+DELIVERABLES
+- All 37 screen groups above, designed in full, with consistent components, spacing and the palette above.
+- Provide mobile versions of every screen and desktop versions of: Landing, Home feed, Property detail, Scam Check, Post Review, Admin dashboard.
+- Include a small design system page (colors, typography, buttons, cards, badges, inputs, rating stars, chips, navigation).
+- Do not stop until every screen is fully designed. Continue automatically through the whole list.

@@ -1,0 +1,6 @@
+{
+  "name": "RentTruth AKS",
+  "description": "Akwa Ibom Rental Review & Verification Platform - Check before you pay, post move-out reviews, and avoid house scams in Uyo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
